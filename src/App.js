@@ -1,3 +1,4 @@
+import {TaskItem} from "./TaskItem";
 
 function App() {
   return (
@@ -6,18 +7,10 @@ function App() {
         <input type="text" placeholder="Task name"></input>
         <button>Create task</button>
         <ul>
-          <li>
-            <input checked="true" type="checkbox" />
-            <span>Learn React</span>
-          </li>
-          <li>
-            <input type="checkbox" />
-            <span>Learn Hocks</span>
-          </li>
-          <li>
-            <input type="checkbox" />
-            <span>Keep on Keeping on</span>
-          </li>
+          <TaskItem isChecked={true} taskName="Learn React" />
+          <TaskItem isChecked={false} taskName="Learn Hocks" />
+          <TaskItem isChecked={false} taskName="Keep on Keeping on" />
+  
         </ul>
       </form>
     </main>
